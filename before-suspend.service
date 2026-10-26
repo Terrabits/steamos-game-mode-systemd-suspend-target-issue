@@ -1,0 +1,10 @@
+[Unit]
+Description=Service that should trigger before suspend.target
+Before=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/deck/before-suspend.sh
+
+[Install]
+WantedBy=suspend.target

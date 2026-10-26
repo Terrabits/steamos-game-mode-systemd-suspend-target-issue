@@ -1,0 +1,10 @@
+[Unit]
+Description=Service that should trigger after suspend.target
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/deck/after-suspend.sh
+
+[Install]
+WantedBy=suspend.target
